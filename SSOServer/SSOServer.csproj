@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="SSOServer.Providers.Mock\**" />
+    <EmbeddedResource Remove="SSOServer.Providers.Mock\**" />
+    <None Remove="SSOServer.Providers.Mock\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="2.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SSOServer.Core\SSOServer.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="hosting.jcfg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
