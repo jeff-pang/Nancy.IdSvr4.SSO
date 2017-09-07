@@ -13,13 +13,12 @@ namespace SSOServer.Providers.Mock
                 {
                     ClientId = "nancy",
                     ClientName = "Nancy Client",
-                    AllowedGrantTypes = GrantTypes.HybridAndClientCredentials,
+                    AllowedGrantTypes = GrantTypes.Implicit,
                     RequireConsent = false,
                     // where to redirect to after login
-                    RedirectUris = { "http://localhost/signin-oidc" },
-                    
+                    RedirectUris = { "http://localhost/signin-oidc" },                    
                     // where to redirect to after logout
-                    PostLogoutRedirectUris = { "http://localhost/account/logout" },
+                    PostLogoutRedirectUris = { "http://localhost/" },
 
                     AllowedScopes = new List<string>
                     {

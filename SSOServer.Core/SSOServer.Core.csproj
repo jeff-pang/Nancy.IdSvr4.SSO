@@ -29,4 +29,10 @@
     <ProjectReference Include="..\SSOServer.Providers\SSOServer.Providers.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Views\Login.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
