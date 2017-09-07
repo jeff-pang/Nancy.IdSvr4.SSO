@@ -6,20 +6,19 @@ namespace SSOServer.Core.WebApi
 {
     public class Account:NancyModule
     {
-        public Account()
+        public Account():base("/account")
         { 
-            Get("/signin-oidc", p => {
-                Context.GetAuthenticationManager();
+            Get("/login", p => {
+
                 return View["Login.html"];
             });
 
-            Post("/signin-oidc", p => {
+            Post("/login", p => {
 
                 string subjectId = null;
 
-                if(Context.Request.Cookies.ContainsKey(".AspNetCore.Session"))
+                if(Context.Request.Cookies.ContainsKey("id"))
                 {
-                    subjectId = Context.Request.Cookies[".AspNetCore.Session"];
                 }
 
                 var mgr = Context.GetAuthenticationManager();

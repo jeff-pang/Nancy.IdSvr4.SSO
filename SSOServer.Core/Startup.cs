@@ -37,11 +37,11 @@ namespace SSOServer.Core
             .UseOpenIdConnectAuthentication(new OpenIdConnectOptions
             {
                 AuthenticationScheme = "oidc",
-                SignInScheme = "Cookies",
+                SignInScheme = "Cookie",
                 Authority = "http://localhost",
                 RequireHttpsMetadata = false,
                 ClientId = "nancy",
-
+                SaveTokens = true
             })
             .UseIdentityServer()
             .UseOwin(x => {
