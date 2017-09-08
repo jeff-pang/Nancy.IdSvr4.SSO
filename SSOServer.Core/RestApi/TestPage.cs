@@ -1,7 +1,7 @@
 ﻿using Nancy;
 using Nancy.Security;
 
-namespace AuthNX.Core.WebApi
+namespace SSOServer.Core.RestApi
 {
     public class TestPage:NancyModule
     {

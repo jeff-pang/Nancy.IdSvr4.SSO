@@ -2,7 +2,7 @@
 using Nancy;
 using System;
 
-namespace SSOServer.Core.WebApi
+namespace SSOServer.Core.RestApi
 {
     public class Account:NancyModule
     {
